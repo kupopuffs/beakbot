@@ -1,6 +1,6 @@
 Yo, our bots suck. How hard is it?
 
-I wouldn't know, I stole this from [Gabriel fewtygjuruyi;jolkTanner](https://gabrieltanner.org/blog/dicord-music-bot)
+I wouldn't know, I stole this from [Gabriel Tanner](https://gabrieltanner.org/blog/dicord-music-bot)
 
 install node
 

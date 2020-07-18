@@ -4,7 +4,9 @@ const {
     playCommand,
     stopCommand,
     skipCommand,
-    volume
+    volume,
+	ping
+	
 } = require("./config.json");
 const { token } = require("./token.json");
 const ytdl = require("ytdl-core");
