@@ -3,6 +3,6 @@
     "playCommand": "p",
     "stopCommand": "s",
     "skipCommand": "n",
-    "volume": "1",
-	"ping": "ping"
+    "volume": "1.5",
+    "ping": "moo"
 }

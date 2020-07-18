@@ -5,8 +5,8 @@ const {
     stopCommand,
     skipCommand,
     volume,
-	ping
-	
+    ping
+
 } = require("./config.json");
 const { token } = require("./token.json");
 const ytdl = require("ytdl-core");
@@ -43,15 +43,17 @@ client.on("message", async message => {
     } else if (message.content.startsWith(`${prefix}${stopCommand}`)) {
         stop(message, serverQueue);
         return;
-    
-}  else if(message.content.startsWith(`${prefix}${ping}`)) {
+    } else if (message.content.startsWith(`${prefix}${ping}`)) {
         const m = await message.channel.send("Ping?");
-	  m.edit(`dick! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
-	return;
-	else {
+        m.edit(`dick! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
+        return;
+    } else {
         message.channel.send("You need to enter a valid command!");
     }
 });
+
+async function pingMessage(message) {
+    }
 
 async function execute(message, serverQueue) {
     const args = message.content.split(" ");
@@ -144,11 +146,5 @@ function play(guild, song) {
     dispatcher.setVolumeLogarithmic(serverQueue.volume / 5);
     serverQueue.textChannel.send(`Start playing: **${song.title}**`);
 }
-
-    
-  if(command === "ping") {
-	  const m = await message.channel.send("Ping?");
-	  m.edit(`dick! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
-  }
 
 client.login(token);
