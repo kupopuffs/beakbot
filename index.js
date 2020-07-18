@@ -43,7 +43,12 @@ client.on("message", async message => {
     } else if (message.content.startsWith(`${prefix}${stopCommand}`)) {
         stop(message, serverQueue);
         return;
-    } else {
+    
+}  else if(message.content.startsWith(`${prefix}${ping}`)) {
+        const m = await message.channel.send("Ping?");
+	  m.edit(`dick! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
+	return;
+	else {
         message.channel.send("You need to enter a valid command!");
     }
 });
