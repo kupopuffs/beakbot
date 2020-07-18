@@ -2,6 +2,7 @@
     "prefix": "bb ",
     "playCommand": "p",
     "stopCommand": "s",
-    "skipCommand": "n",
-    "volume": "1"
+    "skipCommand": "q",
+    "debugFlag": " -d",
+    "volume": "1.5"
 }
