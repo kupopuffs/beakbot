@@ -1,12 +1,12 @@
 const Discord = require("discord.js");
 const {
     prefix,
-    token,
     playCommand,
     stopCommand,
     skipCommand,
     volume
 } = require("./config.json");
+const { token } = require("./token.json");
 const ytdl = require("ytdl-core");
 
 const client = new Discord.Client();
