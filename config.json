@@ -2,7 +2,7 @@
     "prefix": "bb ",
     "playCommand": "p",
     "stopCommand": "s",
-    "skipCommand": "q",
-    "debugFlag": " -d",
-    "volume": "1.5"
+    "skipCommand": "n",
+    "volume": "1",
+	"ping": "ping"
 }

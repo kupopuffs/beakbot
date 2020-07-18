@@ -25,6 +25,7 @@ client.once("disconnect", () => {
     console.log("Disconnect!");
 });
 
+
 client.on("message", async message => {
     if (message.author.bot) return;
     if (!message.content.startsWith(prefix)) return;
@@ -99,7 +100,7 @@ async function execute(message, serverQueue) {
 function skip(message, serverQueue) {
     if (!message.member.voice.channel)
         return message.channel.send(
-            "You have to be in a voice channel to stop the music!"
+            "kiss my ass fag"
         );
     if (!serverQueue)
         return message.channel.send("There is no song that I could skip!");
@@ -136,5 +137,11 @@ function play(guild, song) {
     dispatcher.setVolumeLogarithmic(serverQueue.volume / 5);
     serverQueue.textChannel.send(`Start playing: **${song.title}**`);
 }
+
+    
+  if(command === "ping") {
+	  const m = await message.channel.send("Ping?");
+	  m.edit(`dick! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
+  }
 
 client.login(token);
