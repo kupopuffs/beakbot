@@ -16,15 +16,15 @@ const client = new Discord.Client();
 const queue = new Map();
 
 client.once("ready", () => {
-    console.log("Ready!");
+    console.log("ready to gay!");
 });
 
 client.once("reconnecting", () => {
-    console.log("Reconnecting!");
+    console.log("re gaying!");
 });
 
 client.once("disconnect", () => {
-    console.log("Disconnect!");
+    console.log("im gay!");
 });
 
 
