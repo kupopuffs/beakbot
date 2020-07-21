@@ -49,8 +49,7 @@ client.on("message", async message => {
         m.edit(`dick! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
         return;
 	} else if (message.content.startsWith(`${prefix}${hook}`)) { 
-	     hook(message, serverQueue);
-	    return;
+	
 	} else (message.channel.send("You need to enter a valid command!");
        }
 });
@@ -138,11 +137,6 @@ function play(guild, song) {
         queue.delete(guild.id);
         return;
     }
-	
-	function hook(percent, num){
-    return message.channel.send ( 
-	(percent / 100) * num );
-}
 
     const dispatcher = serverQueue.connection
         .play(ytdl(song.url))
