@@ -5,7 +5,8 @@ const {
     stopCommand,
     skipCommand,
     volume,
-    ping
+    ping,
+	hook
 
 } = require("./config.json");
 const { token } = require("./token.json");
@@ -47,9 +48,10 @@ client.on("message", async message => {
         const m = await message.channel.send("Ping?");
         m.edit(`dick! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
         return;
-    } else {
-        message.channel.send("You need to enter a valid command!");
-    }
+	} else if (message.content.startsWith(`${prefix}${hook}`)) { 
+	
+	} else (message.channel.send("You need to enter a valid command!");
+       }
 });
 
 async function pingMessage(message) {
