@@ -4,6 +4,5 @@
     "stopCommand": "s",
     "skipCommand": "n",
     "volume": "1.5",
-    "ping": "moo",
-	"hook": "h"
+    "ping": "moo"
 }
