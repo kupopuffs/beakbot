@@ -143,8 +143,8 @@ function play(guild, song) {
             play(guild, serverQueue.songs[0]);
         })
         .on("error", error => console.error(error));
-    dispatcher.setVolumeLogarithmic(serverQueue.volume / 1);
-    serverQueue.textChannel.send(`Start playing: **${song.title}**`);
+    dispatcher.setVolumeLogarithmic(serverQueue.volume / 1);  // zahir says all the songs are loud
+    serverQueue.textChannel.send(`Start playing: **${song.title}**`);   
 }
 
 client.login(token);
